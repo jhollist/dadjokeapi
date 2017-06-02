@@ -9,5 +9,5 @@
 groan <- function(){
   request<-httr::GET("https://icanhazdadjoke.com",
                      httr::accept("text/plain"))
-  httr::content(request, encoding = "ISO-8859-1")
+  httr::content(request)
 }
