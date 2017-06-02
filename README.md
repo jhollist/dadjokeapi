@@ -15,8 +15,10 @@ devtools::install_github("jhollist/dadjoke")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to solve a common problem...  The problem of not laughing enough!!!
 
 ``` r
 dadjoke::groan()
+
+
 ```
