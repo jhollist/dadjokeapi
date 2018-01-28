@@ -4,7 +4,11 @@
 \alias{groan}
 \title{Function to return random dad joke}
 \usage{
-groan()
+groan(rimshot = TRUE)
+}
+\arguments{
+\item{rimshot}{Plays a rimshot after the joke.  Sound from
+\url{https://archive.org/details/Rimshot_254}}
 }
 \description{
 This function returns a random dad joke from \url{https://icanhazdadjoke.com}
