@@ -4,10 +4,10 @@
 \alias{groan}
 \title{Function to return random dad joke}
 \usage{
-groan(rimshot = TRUE)
+groan(sting = TRUE)
 }
 \arguments{
-\item{rimshot}{Plays a rimshot after the joke.  Sound from
+\item{sting}{Plays a joke sting after the joke.  Sound from
 \url{https://archive.org/details/Rimshot_254}}
 }
 \description{
