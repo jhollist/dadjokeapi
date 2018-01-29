@@ -14,7 +14,7 @@ groan <- function(sting = TRUE){
   joke <- httr::content(request, "text", encoding = "UTF-8")
   if(sting){
     message(joke)
-    Sys.sleep(0.5)
+    Sys.sleep(1)
     beepr::beep(system.file("sounds/joke_sting.wav",package = "dadjoke"))
   } else {
     message(joke)
