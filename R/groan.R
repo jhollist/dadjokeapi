@@ -9,9 +9,13 @@
 
 
 groan <- function(sting = TRUE){
-  request<-httr::GET("https://icanhazdadjoke.com",
-                     httr::accept("text/plain"))
-  joke <- httr::content(request, "text", encoding = "UTF-8")
+  if(curl::has_internet()){
+    request<-httr::GET("https://icanhazdadjoke.com",
+                       httr::accept("text/plain"))
+    joke <- httr::content(request, "text", encoding = "UTF-8")
+  } else {
+    joke <- "Why did the chicken cross the road?  Becuase you don't currently have an internet connection."
+  }
   if(sting){
     message(joke)
     Sys.sleep(1)
