@@ -14,7 +14,7 @@ groan <- function(sting = TRUE){
                        httr::accept("text/plain"))
     joke <- httr::content(request, "text", encoding = "UTF-8")
   } else {
-    joke <- "Why did the chicken cross the road?  Becuase you don't currently have an internet connection."
+    joke <- "Why did the chicken cross the road? Because you don't currently have an internet connection."
   }
   if(sting){
     message(joke)
