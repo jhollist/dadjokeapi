@@ -9,8 +9,10 @@
 
 
 groan <- function(sting = TRUE){
+  #"User-Agent: My Library (https://github.com/username/repo)"
   if(curl::has_internet()){
     request<-httr::GET("https://icanhazdadjoke.com",
+                       httr::user_agent("dadjoke R package (https://github.com/jhollist/dadjoke)"),
                        httr::accept("text/plain"))
     joke <- httr::content(request, "text", encoding = "UTF-8")
   } else {
