@@ -1,10 +1,11 @@
 Package: dadjoke
 Type: Package
 Title: Return a Random Dad Joke
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(person("Jeffrey W.", "Hollister", email = "hollister.jeff@epa.gov", 
                     role = c("aut", "cre")),
-             person("Antoine Bichat",role = c("ctb")))
+             person("Antoine Bichat",role = c("ctb")),
+             person("Brett Langdon", role = c("cph")))
 Description: What is funnier than a dad joke?  A dad joke in R!  This package 
     utilizes the API for <https://icanhazdadjoke.com> and returns a random dad
     joke.
