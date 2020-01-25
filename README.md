@@ -1,10 +1,10 @@
 # jokeR
 
-Forked from [Jeffrey Hollister's dadjoke R package](https://github.com/jhollist/dadjoke), this fork removes the sting and adds a similar function for Chuck Norris jokes. I'm planning to use this package in R/Shiny apps as "loading screen entertainment" and the sting starts to wear after a while!
+Forked from [Jeff Hollister's dadjoke R package](https://github.com/jhollist/dadjoke), this fork removes the sting and adds a similar function for Chuck Norris jokes. I'm planning to use this package in R/Shiny apps as "loading screen entertainment" and the sting starts to wear after a while!
 
 ## Credits:
 
-Jeffrey Hollister (for the original R package!), [Brett Langdon](https://brett.is/) (for the <icanhazdadjoke.com> API), and whoever (?) is the mastermind behind the [Internet Chuck Norris Database](https://icndb.com). 
+Jeff Hollister (for the original R package!), [Brett Langdon](https://brett.is/) (for the <https://icanhazdadjoke.com> API), and whoever (?) is the mastermind behind the [Internet Chuck Norris Database](https://icndb.com). 
 
 
 ## Installation
