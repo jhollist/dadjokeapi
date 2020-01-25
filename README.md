@@ -16,12 +16,19 @@ You can install jokeR from GitHub with:
 devtools::install_github("tanho63/joker")
 ```
 
-## Example
+## Examples
 
-This is a basic example which shows you how to solve a common problem...  the problem of not laughing enough!!!
+This is a basic example which shows you how to solve a common problem...  the problem of not laughing enough!
 
 ``` r
-joker::groan()
+joker::dadjoke()
 
 [1] "I was thinking about moving to Moscow but there is no point Russian into things."
+
+joker::chuckjoke()
+[1] "Chuck Norris did in fact, build Rome in a day."
+
+joker::randomjoke()
+[1] "My first time using an elevator was an uplifting experience. The second time let me down."
 ```
+Random jokes are tuned to give more dadjokes than chuckjokes - this is because chuckjokes are sometimes not SFW/PC even though we're filtering out explicit ones.
