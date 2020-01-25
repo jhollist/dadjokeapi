@@ -1,7 +1,7 @@
 Package: joker
 Type: Package
 Title: Return a Random Joke from API
-Version: 0.1.2
+Version: 0.0.1
 Authors@R: c(person("Tan", "Ho", email = "tan@tanho.ca",role = c("aut", "cre")),
              person("Jeffrey W Hollister",role = c("aut")),       
              person("Antoine Bichat",role = c("ctb")),
