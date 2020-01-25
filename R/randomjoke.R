@@ -9,7 +9,7 @@
 randomjoke <- function(){
   randomselector<-sample(1:10,1)
 
-  if (randomselector > 5){
+  if (randomselector > 2){
     dadjoke()
     } else{
     chuckjoke()
