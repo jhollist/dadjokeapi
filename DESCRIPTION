@@ -1,19 +1,21 @@
-Package: dadjoke
+Package: joker
 Type: Package
-Title: Return a Random Dad Joke
+Title: Return a Random Joke from API
 Version: 0.1.2
-Authors@R: c(person("Jeffrey W.", "Hollister", email = "hollister.jeff@epa.gov", 
-                    role = c("aut", "cre")),
+Authors@R: c(person("Tan", "Ho", email = "tan@tanho.ca",role = c("aut", "cre")),
+             person("Jeffrey W Hollister",role = c("aut")),       
              person("Antoine Bichat",role = c("ctb")),
              person("Brett Langdon", role = c("cph")))
-Description: What is funnier than a dad joke?  A dad joke in R!  This package 
-    utilizes the API for <https://icanhazdadjoke.com> and returns a random dad
-    joke.
+Description: What is funnier than a joke?  A joke in R!  This package 
+    utilizes the APIs for <https://icanhazdadjoke.com> and <https://icndb.com> and returns a random
+    dadjoke or Chuck Norris joke.
 License: MIT + file LICENSE
 Depends: R (>= 3.0.0)
 Imports: 
   httr,
-  beepr,
+  jsonlite,
+  textutils,
   curl
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 7.0.2
+Encoding: UTF-8
