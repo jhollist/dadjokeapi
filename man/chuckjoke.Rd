@@ -4,11 +4,18 @@
 \alias{chuckjoke}
 \title{Function to return random Chuck Norris joke}
 \usage{
-chuckjoke(explicit = FALSE)
+chuckjoke(sfw = TRUE)
+}
+\arguments{
+\item{sfw}{(Defaults to TRUE) Filters out explicit, political, and religion jokes from the potential returns.}
+}
+\value{
+A random Chuck Norris joke from \url{https://chucknorris.io}
 }
 \description{
-This function returns a random Chuck Norris joke from \url{https://icndb.com}
+This function returns a random Chuck Norris joke from \url{https://chucknorris.io}
 }
 \examples{
 chuckjoke()
+chuckjoke(sfw=FALSE)
 }

@@ -4,7 +4,7 @@ Forked from [Jeff Hollister's dadjoke R package](https://github.com/jhollist/dad
 
 ## Credits:
 
-Jeff Hollister (for the original R package!), [Brett Langdon](https://brett.is/) (for the <https://icanhazdadjoke.com> API), and whoever (?) is the mastermind behind the [Internet Chuck Norris Database](https://icndb.com). 
+Jeff Hollister (for the original R package!), [Brett Langdon](https://brett.is/) (for the <https://icanhazdadjoke.com> API), and [Mathias Schilling](https://matchilling.com) (for the <https://chucknorris.io> API)
 
 
 ## Installation
@@ -18,7 +18,7 @@ devtools::install_github("tanho63/joker")
 
 ## Examples
 
-This is a basic example which shows you how to solve a common problem...  the problem of not laughing enough!
+This is a basic example which shows you how to solve a common problem - the problem of not laughing enough!
 
 ``` r
 joker::dadjoke()
@@ -30,4 +30,4 @@ joker::chuckjoke()
 joker::randomjoke()
 [1] "My first time using an elevator was an uplifting experience. The second time let me down."
 ```
-Random jokes are tuned to give more dadjokes than chuckjokes - this is because chuckjokes are sometimes not SFW/PC even though we're filtering out explicit ones.
+
