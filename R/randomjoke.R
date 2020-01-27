@@ -2,14 +2,14 @@
 #'
 #' This function chooses a joke to return, calling either dadjoke() or chuckjoke() at random.
 #' @export
-#' @examples
+#' @examples 
 #' randomjoke()
 
 
 randomjoke <- function(){
-  randomselector<-sample(1:10,1)
+  randomjokeselector<-sample(1:10,1)
 
-  if (randomselector > 2){
+  if (randomjokeselector > 5){
     dadjoke()
     } else{
     chuckjoke()
