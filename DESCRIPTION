@@ -1,21 +1,24 @@
 Package: joker
 Type: Package
-Title: Return a Random Joke from API
-Version: 0.0.1
+Title: Return a Random Joke from APIs
+Version: 0.0.3
 Authors@R: c(person("Tan", "Ho", email = "tan@tanho.ca",role = c("aut", "cre")),
-             person("Jeffrey W Hollister",role = c("aut")),       
+             person("Jeffrey W Hollister",role = c("aut")),
+             person("Mathias Schilling", role = c("cph")),
              person("Antoine Bichat",role = c("ctb")),
              person("Brett Langdon", role = c("cph")))
 Description: What is funnier than a joke?  A joke in R!  This package 
-    utilizes the APIs for <https://icanhazdadjoke.com> and <https://icndb.com> and returns a random
+    utilizes the APIs for <https://icanhazdadjoke.com> and <https://chucknorris.io> and returns a random
     dadjoke or Chuck Norris joke.
 License: MIT + file LICENSE
 Depends: R (>= 3.0.0)
 Imports: 
   httr,
   jsonlite,
-  textutils,
   curl
 LazyData: true
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.0
 Encoding: UTF-8
+Suggests: 
+    testthat,
+    httptest

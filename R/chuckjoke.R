@@ -1,7 +1,7 @@
 #' Function to return random Chuck Norris joke
 #'
 #' This function returns a random Chuck Norris joke from \url{https://chucknorris.io}
-#' 
+#'
 #' @param sfw (Defaults to TRUE) Filters out explicit, political, and religion jokes from the potential returns.
 #' @return A random Chuck Norris joke from \url{https://chucknorris.io}
 #' @export
@@ -33,7 +33,5 @@ chuckjoke <- function(sfw = TRUE) {
     joke <-
       "Chuck Norris roundhouse-kicked your internet connection, and that's why it's down right now."
   }
-  message(joke)
-  
-  invisible(joke)
+  return(joke)
 }
