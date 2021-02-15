@@ -10,8 +10,14 @@ groan(sting = TRUE)
 \item{sting}{Plays a joke sting after the joke.  Sound from
 \url{https://archive.org/details/Rimshot_254}}
 }
+\value{
+Invisibly returns a two item list with the first item holding the
+        joke as a character and the second item containing the joke id as a
+        character.
+}
 \description{
-This function returns a random dad joke from \url{https://icanhazdadjoke.com}
+This function returns a random dad joke(s) from 
+\url{https://icanhazdadjoke.com}. as a message and invisibly as a character.
 }
 \examples{
 groan()
