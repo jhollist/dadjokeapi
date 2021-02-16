@@ -19,7 +19,7 @@ groan <- function(sting = TRUE) {
   request <- httr::GET("https://icanhazdadjoke.com",
                      httr::user_agent("dadjoke R package (https://github.com/jhollist/dadjoke)"),
                      httr::accept("application/json"))
-  if (http_type(request) != "application/json") {
+  if (httr::http_type(request) != "application/json") {
     stop("The icanhazdadjoke API did not return JSON as expected", call. = FALSE)
   }
   joke <- httr::content(request, "parsed", encoding = "UTF-8")
@@ -53,7 +53,7 @@ groan_id <- function(joke_id) {
   request <- httr::GET(url,
                        httr::user_agent("dadjoke R package (https://github.com/jhollist/dadjoke)"),
                        httr::accept("application/json"))
-  if (http_type(request) != "application/json") {
+  if (httr::http_type(request) != "application/json") {
     stop("The icanhazdadjoke API did not return JSON as expected", call. = FALSE)
   }
   joke <- httr::content(request, "parsed", encoding = "UTF-8")
@@ -68,7 +68,6 @@ groan_id <- function(joke_id) {
 #'  
 #' @param joke_id A specific dad joke ID to return
 #' @return Returns a png array from png::readPNG.     
-#' @importFrom png readPNG             
 #' @export
 #' @examples
 #' joke_png <- groan_image("GlGBIY0wAAd")
@@ -82,10 +81,10 @@ groan_image <- function(joke_id) {
   request <- httr::GET(url,
                        httr::user_agent("dadjoke R package (https://github.com/jhollist/dadjoke)"),
                        httr::accept("image/png"))
-  if (http_type(request) != "image/png") {
+  if (httr::http_type(request) != "image/png") {
     stop("The icanhazdadjoke API did not return a PNG as expected", call. = FALSE)
   }
-  joke <- png::readPNG(request$content)
+  joke <- readPNG(request$content)
   joke
 }
 
@@ -101,7 +100,7 @@ groan_image <- function(joke_id) {
 #' @importFrom dplyr bind_rows
 #' @examples
 #' groan_search(term = "cat")
-groan_search <- function(term, page = NULL) {
+groan_search <- function(term) {
   
   if (!curl::has_internet()) {
     stop("Why did the chicken cross the road? Because you don't currently have an internet connection.")
@@ -111,34 +110,24 @@ groan_search <- function(term, page = NULL) {
   request <- httr::GET(url,
                        httr::user_agent("dadjoke R package (https://github.com/jhollist/dadjoke)"),
                        httr::accept("application/json"))
-  if (http_type(request) != "application/json") {
+  if (httr::http_type(request) != "application/json") {
     stop("The icanhazdadjoke API did not return JSON as expected", call. = FALSE)
   }
   jokes <- httr::content(request, "parsed", encoding = "UTF-8")
   n_page <- jokes$total_pages
   results <- jokes$results
-  if (is.null(page) & n_page > 1 & n_page <= 50) {
+  if (n_page > 1 & n_page <= 50) {
     for (page in seq(2, n_page)) {
       url <- paste0("https://icanhazdadjoke.com/search?term=", term, "&page=", page, "&limit=30")
       request <- httr::GET(url,
                            httr::user_agent("dadjoke R package (https://github.com/jhollist/dadjoke)"),
                            httr::accept("application/json"))
-      if (http_type(request) != "application/json") {
+      if (httr::http_type(request) != "application/json") {
         stop("The icanhazdadjoke API did not return JSON as expected", call. = FALSE)
       }
       jokes <- httr::content(request, "parsed", encoding = "UTF-8")
       results <- c(results, jokes$results)
     }
-  } else if (!is.null(page)) {
-    url <- paste0("https://icanhazdadjoke.com/search?term=", term, "&page=", page, "&limit=30")
-    request <- httr::GET(url,
-                         httr::user_agent("dadjoke R package (https://github.com/jhollist/dadjoke)"),
-                         httr::accept("application/json"))
-    if (http_type(request) != "application/json") {
-      stop("The icanhazdadjoke API did not return JSON as expected", call. = FALSE)
-    }
-    jokes <- httr::content(request, "parsed", encoding = "UTF-8")
-    results <- jokes$results
   } else if (n_page > 50) {
     stop(paste("You request will result in", n_page, "hits to the 
          icanhazdadjoke API and the current limit is 50. Try narrowing your 

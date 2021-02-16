@@ -4,7 +4,7 @@
 \alias{groan_search}
 \title{Function to search and return dad jokes with specific terms}
 \usage{
-groan_search(term, page = NULL)
+groan_search(term)
 }
 \arguments{
 \item{term}{A term to search \url{https://icanhazdadjoke.com}}
@@ -18,5 +18,5 @@ This function returns a specific dad joke as a png from
 \url{https://icanhazdadjoke.com} using its dad joke ID.
 }
 \examples{
-groan_search(term = )
+groan_search(term = "cat")
 }

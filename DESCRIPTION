@@ -1,7 +1,7 @@
 Package: dadjoke
 Type: Package
 Title: Return a Random Dad Joke
-Version: 0.1.2
+Version: 1.0.0
 Authors@R: c(person("Jeffrey W.", "Hollister", email = "hollister.jeff@epa.gov", 
                     role = c("aut", "cre")),
              person("Antoine Bichat",role = c("ctb")),

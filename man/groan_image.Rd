@@ -8,9 +8,6 @@ groan_image(joke_id)
 }
 \arguments{
 \item{joke_id}{A specific dad joke ID to return}
-
-\item{image}{A logical to indicate if an image of a specific joke ID should 
-be returned instead of text.}
 }
 \value{
 Returns a png array from png::readPNG.
