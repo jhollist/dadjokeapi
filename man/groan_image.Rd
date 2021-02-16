@@ -4,13 +4,10 @@
 \alias{groan_image}
 \title{Function to return a specific dad joke as an image}
 \usage{
-groan_image(joke_id, sting = TRUE)
+groan_image(joke_id)
 }
 \arguments{
 \item{joke_id}{A specific dad joke ID to return}
-
-\item{sting}{Plays a joke sting after the joke.  Sound from
-\url{https://archive.org/details/Rimshot_254}}
 
 \item{image}{A logical to indicate if an image of a specific joke ID should 
 be returned instead of text.}
@@ -23,5 +20,5 @@ This function returns a specific dad joke as a png from
 \url{https://icanhazdadjoke.com} using its dad joke ID.
 }
 \examples{
-groan()
+joke_png <- groan_image("GlGBIY0wAAd")
 }
