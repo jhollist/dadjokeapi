@@ -1,3 +1,11 @@
+[![R build
+status](https://github.com/jhollist/dadjoke/workflows/R-CMD-check/badge.svg)](https://github.com/jhollist/dadjoke/actions)
+[![](https://www.r-pkg.org/badges/version/dadjoke)](https://www.r-pkg.org/pkg/dadjoke)
+[![CRAN RStudio mirror
+downloads](https://cranlogs.r-pkg.org/badges/dadjoke)](https://www.r-pkg.org/pkg/dadjoke)
+[![Codecov test
+coverage](https://codecov.io/gh/jhollist/dadjoke/branch/master/graph/badge.svg)](https://codecov.io/gh/jhollist/dadjoke?branch=master)
+
 # dadjoke
 
 The goal of dadjoke is to make you laugh in spite of yourself.
@@ -11,6 +19,12 @@ You can install dadjoke from github with:
 ``` r
 # install.packages("devtools")
 devtools::install_github("jhollist/dadjoke")
+```
+
+And from CRAN with
+
+``` r
+install.packages("dadjoke")
 ```
 
 ## Example
