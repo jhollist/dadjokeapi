@@ -1,4 +1,5 @@
 context("groan")
+skip_on_cran()
 x <- groan_search("cat")
 y <- groan_search("why", page = 2) 
 meowtain <- x$joke[x$id == "BQfaxsHBsrc"]

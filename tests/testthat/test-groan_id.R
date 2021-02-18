@@ -1,4 +1,5 @@
 context("groan")
+skip_on_cran()
 x <- groan_id("GlGBIY0wAAd")
 
 test_that("groan gets a specific joke", {
