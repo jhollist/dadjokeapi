@@ -12,8 +12,7 @@ test_that("groan gets a joke and an id", {
 })
 
 test_that("groan fails without internet", {
-  with_mock(
-    "has_internet" = function(x) FALSE, 
-    expect_error(groan_search("why"))
-  )
+  mockery::stub(groan_search, "curl::has_internet", FALSE) 
+  expect_error(groan_search("why"))
 })
+

@@ -7,8 +7,6 @@ test_that("groan gets a joke as an image", {
 })
 
 test_that("groan fails without internet", {
-  with_mock(
-    "has_internet" = function(x) FALSE, 
-    expect_error(groan_image("GlGBIY0wAAd"))
-  )
+  mockery::stub(groan_image, "curl::has_internet", FALSE) 
+  expect_error(groan_image("GlGBIY0wAAd"))
 })
