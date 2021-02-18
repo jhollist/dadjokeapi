@@ -114,6 +114,7 @@ groan_search <- function(term) {
   if (httr::http_type(request) != "application/json") {
     stop("The icanhazdadjoke API did not return JSON as expected", call. = FALSE)
   }
+  
   jokes <- httr::content(request, "parsed", encoding = "UTF-8")
   n_page <- jokes$total_pages
   results <- jokes$results
@@ -130,9 +131,8 @@ groan_search <- function(term) {
       results <- c(results, jokes$results)
     }
   } else if (n_page > 50) {
-    stop(paste("You request will result in", n_page, "hits to the 
-         icanhazdadjoke API and the current limit is 50. Try narrowing your 
-         search or use the page argument to specify individual pages."))
+    stop(paste("You request will result in", n_page, "hits to the icanhazdadjoke
+    API and the current limit is 50. Try narrowing your search."))
   }
   
   jokes <-dplyr::bind_rows(results)
