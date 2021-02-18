@@ -10,3 +10,10 @@ test_that("groan gets a joke and an id", {
   expect_equal(meowtain, "What do you call a pile of cats?  A Meowtain.")
   expect_gt(nrow(y), 30)
 })
+
+test_that("groan fails without internet", {
+  with_mock(
+    "has_internet" = function(x) FALSE, 
+    expect_error(groan_search("why"))
+  )
+})
