@@ -108,6 +108,7 @@ groan_search <- function(term) {
   }  
   
   url <- paste0("https://icanhazdadjoke.com/search?term=", term, "&page=1&limit=30")
+  url <- gsub(" ", "%20", url)
   request <- httr::GET(url,
                        httr::user_agent("dadjoke R package (https://github.com/jhollist/dadjoke)"),
                        httr::accept("application/json"))
@@ -136,6 +137,10 @@ groan_search <- function(term) {
   }
   
   jokes <-dplyr::bind_rows(results)
+  if(length(names(jokes)) == 0){
+    jokes$joke <- NA
+    jokes$id <- NA
+  }
   jokes <- jokes[c("joke", "id")]
   jokes
 }

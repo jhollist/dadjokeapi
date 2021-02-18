@@ -26,3 +26,8 @@ test_that("groan fails without internet", {
   mockery::stub(groan_search, "curl::has_internet", FALSE) 
   expect_error(groan_search("why"))
 })
+
+test_that("groan search returns a two column data frame even with no hits", {
+  expect_equal(ncol(groan_search("Asearchthatwillneverreturnanything")),
+               2)
+})
