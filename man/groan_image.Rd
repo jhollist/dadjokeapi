@@ -10,7 +10,7 @@ groan_image(joke_id)
 \item{joke_id}{A specific dad joke ID to return}
 }
 \value{
-Returns a png array from png::readPNG.
+Returns a png array from readPNG.
 }
 \description{
 This function returns a specific dad joke as a png from 

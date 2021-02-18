@@ -10,7 +10,7 @@
 #'         joke as a character and the second item containing the joke id as a
 #'         character.
 #' @examples
-#' groan()
+#' groan(sting = FALSE)
 groan <- function(sting = TRUE) {
   
   if (!curl::has_internet()) {
@@ -67,7 +67,8 @@ groan_id <- function(joke_id) {
 #' \url{https://icanhazdadjoke.com} using its dad joke ID. 
 #'  
 #' @param joke_id A specific dad joke ID to return
-#' @return Returns a png array from png::readPNG.     
+#' @return Returns a png array from readPNG. 
+#' @importFrom png readPNG
 #' @export
 #' @examples
 #' joke_png <- groan_image("GlGBIY0wAAd")
@@ -84,7 +85,7 @@ groan_image <- function(joke_id) {
   if (httr::http_type(request) != "image/png") {
     stop("The icanhazdadjoke API did not return a PNG as expected", call. = FALSE)
   }
-  joke <- readPNG(request$content)
+  joke <- png::readPNG(request$content)
   joke
 }
 

@@ -20,5 +20,5 @@ This function returns a random dad joke(s) from
 \url{https://icanhazdadjoke.com}. as a message and invisibly as a character.
 }
 \examples{
-groan()
+groan(sting = FALSE)
 }
