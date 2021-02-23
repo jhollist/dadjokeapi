@@ -2,7 +2,7 @@ Package: dadjokeapi
 Type: Package
 Title: Return a Random Dad Joke
 Version: 1.0.0
-Authors@R: c(person("Jeffrey W.", "Hollister", email = "hollister.jeff@epa.gov", 
+Authors@R: c(person("Jeffrey", "Hollister", email = "hollister.jeff@epa.gov", 
                     role = c("aut", "cre")),
              person("Antoine Bichat",role = c("ctb")),
              person("Brett Langdon", role = c("cph")))
