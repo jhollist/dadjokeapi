@@ -1,4 +1,4 @@
-dadjoke 1.0.0 (2021-02-18)
+dadjokeapi 1.0.0 (2021-02-18)
 ==========================
 
 ## Initial CRAN Release

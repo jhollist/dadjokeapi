@@ -1,30 +1,30 @@
 [![R build
-status](https://github.com/jhollist/dadjoke/workflows/R-CMD-check/badge.svg)](https://github.com/jhollist/dadjoke/actions)
-[![](https://www.r-pkg.org/badges/version/dadjoke)](https://www.r-pkg.org/pkg/dadjoke)
+status](https://github.com/jhollist/dadjokeapi/workflows/R-CMD-check/badge.svg)](https://github.com/jhollist/dadjokeapi/actions)
+[![](https://www.r-pkg.org/badges/version/dadjokeapi)](https://www.r-pkg.org/pkg/dadjokeapi)
 [![CRAN RStudio mirror
-downloads](https://cranlogs.r-pkg.org/badges/dadjoke)](https://www.r-pkg.org/pkg/dadjoke)
+downloads](https://cranlogs.r-pkg.org/badges/dadjokeapi)](https://www.r-pkg.org/pkg/dadjokeapi)
 [![Codecov test
-coverage](https://codecov.io/gh/jhollist/dadjoke/branch/master/graph/badge.svg)](https://codecov.io/gh/jhollist/dadjoke?branch=master)
+coverage](https://codecov.io/gh/jhollist/dadjokeapi/branch/master/graph/badge.svg)](https://codecov.io/gh/jhollist/dadjokeapi?branch=master)
 
-# dadjoke
+# dadjokeapi
 
-The goal of dadjoke is to make you laugh in spite of yourself.
+The goal of dadjokeapi is to make you laugh in spite of yourself.
 
 It is built off of the hard work of [Brett Langdon](https://brett.is/) and the API he supports at <https://icanhazdadjoke.com>
 
 ## Installation
 
-You can install dadjoke from github with:
+You can install dadjokeapi from github with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("jhollist/dadjoke")
+devtools::install_github("jhollist/dadjokeapi")
 ```
 
 And from CRAN with
 
 ``` r
-install.packages("dadjoke")
+install.packages("dadjokeapi")
 ```
 
 ## Example
@@ -32,7 +32,7 @@ install.packages("dadjoke")
 This is a basic example which shows you how to solve a common problem...  The problem of not laughing enough!!!
 
 ``` r
-dadjoke::groan()
+dadjokeapi::groan()
 
 [1] "I was thinking about moving to Moscow but there is no point Russian into things."
 ```

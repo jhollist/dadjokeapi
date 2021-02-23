@@ -17,7 +17,7 @@ groan <- function(sting = TRUE) {
     stop("Why did the chicken cross the road? Because you don't currently have an internet connection.")
   }  
   request <- httr::GET("https://icanhazdadjoke.com",
-                     httr::user_agent("dadjoke R package (https://github.com/jhollist/dadjoke)"),
+                     httr::user_agent("dadjokeapi R package (https://github.com/jhollist/dadjokeapi)"),
                      httr::accept("application/json"))
   if (httr::http_type(request) != "application/json") {
     stop("The icanhazdadjoke API did not return JSON as expected", call. = FALSE)
@@ -27,7 +27,7 @@ groan <- function(sting = TRUE) {
 
   if (sting) {
     Sys.sleep(1/2)
-    beepr::beep(system.file("sounds/joke_sting.wav",package = "dadjoke"))
+    beepr::beep(system.file("sounds/joke_sting.wav",package = "dadjokeapi"))
   } 
   invisible(joke[c("joke", "id")])
 }
@@ -51,7 +51,7 @@ groan_id <- function(joke_id) {
   
   url <- paste0("https://icanhazdadjoke.com/j/", joke_id)
   request <- httr::GET(url,
-                       httr::user_agent("dadjoke R package (https://github.com/jhollist/dadjoke)"),
+                       httr::user_agent("dadjokeapi R package (https://github.com/jhollist/dadjokeapi)"),
                        httr::accept("application/json"))
   if (httr::http_type(request) != "application/json") {
     stop("The icanhazdadjoke API did not return JSON as expected", call. = FALSE)
@@ -80,7 +80,7 @@ groan_image <- function(joke_id) {
   
   url <- paste0("https://icanhazdadjoke.com/j/", joke_id, ".png")
   request <- httr::GET(url,
-                       httr::user_agent("dadjoke R package (https://github.com/jhollist/dadjoke)"),
+                       httr::user_agent("dadjokeapi R package (https://github.com/jhollist/dadjokeapi)"),
                        httr::accept("image/png"))
   if (httr::http_type(request) != "image/png") {
     stop("The icanhazdadjoke API did not return a PNG as expected", call. = FALSE)
@@ -110,7 +110,7 @@ groan_search <- function(term) {
   url <- paste0("https://icanhazdadjoke.com/search?term=", term, "&page=1&limit=30")
   url <- gsub(" ", "%20", url)
   request <- httr::GET(url,
-                       httr::user_agent("dadjoke R package (https://github.com/jhollist/dadjoke)"),
+                       httr::user_agent("dadjokeapi R package (https://github.com/jhollist/dadjokeapi)"),
                        httr::accept("application/json"))
   if (httr::http_type(request) != "application/json") {
     stop("The icanhazdadjoke API did not return JSON as expected", call. = FALSE)
@@ -123,7 +123,7 @@ groan_search <- function(term) {
     for (page in seq(2, n_page)) {
       url <- paste0("https://icanhazdadjoke.com/search?term=", term, "&page=", page, "&limit=30")
       request <- httr::GET(url,
-                           httr::user_agent("dadjoke R package (https://github.com/jhollist/dadjoke)"),
+                           httr::user_agent("dadjokeapi R package (https://github.com/jhollist/dadjokeapi)"),
                            httr::accept("application/json"))
       if (httr::http_type(request) != "application/json") {
         stop("The icanhazdadjoke API did not return JSON as expected", call. = FALSE)

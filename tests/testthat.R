@@ -1,5 +1,5 @@
 library(testthat)
-library(dadjoke)
+library(dadjokeapi)
 library(curl)
 
-test_check("dadjoke")
+test_check("dadjokeapi")

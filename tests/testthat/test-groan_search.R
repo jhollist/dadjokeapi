@@ -17,7 +17,7 @@ test_that("groan fails when return type isn't as expected",{
 })
 
 test_that("groan search fails with too many pages", {
-  load(system.file("testdata.rda", package = "dadjoke"))
+  load(system.file("testdata.rda", package = "dadjokeapi"))
   mockery::stub(groan_search, "httr::content", httr_content_list)
   expect_error(groan_search("cat"))
 })
