@@ -6,11 +6,14 @@ Authors@R: c(person("Jeffrey W.", "Hollister", email = "hollister.jeff@epa.gov",
                     role = c("aut", "cre")),
              person("Antoine Bichat",role = c("ctb")),
              person("Brett Langdon", role = c("cph")))
+URL: https://github.com/jhollist/dadjokeapi/
+BugReports: https://github.com/jhollist/dadjokeapi/issues/
+Maintainer: Jeffrey Hollister <hollister.jeff@epa.gov>
 Description: What is funnier than a dad joke?  A dad joke in R!  This package 
     utilizes the API for <https://icanhazdadjoke.com> and returns dad jokes from
     several API endpoints.
 License: MIT + file LICENSE
-Depends: R (>= 3.0.0)
+Depends: R (>= 3.5.0)
 Imports: 
   httr,
   beepr,
