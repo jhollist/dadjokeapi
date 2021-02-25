@@ -1,5 +1,6 @@
 ## Comments
-Initial submission to CRAN.  R package that provides access to the icanhazdadjoke API.
+Initial submission to CRAN of an R package that provides access to the 
+icanhazdadjoke API.  Fixes incomplete LICENSE file per 2021-02-25 email.
 
 ## Test Environments
 - Github Actions, Ubuntu 20.04 LTS, R version 4.0.4
