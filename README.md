@@ -6,6 +6,7 @@ downloads](https://cranlogs.r-pkg.org/badges/dadjokeapi)](https://www.r-pkg.org/
 [![Codecov test
 coverage](https://codecov.io/gh/jhollist/dadjokeapi/branch/master/graph/badge.svg)](https://codecov.io/gh/jhollist/dadjokeapi?branch=master)
 
+
 # dadjokeapi
 
 The goal of dadjokeapi is to make you laugh in spite of yourself.
