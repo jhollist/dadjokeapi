@@ -12,6 +12,6 @@ icanhazdadjoke API.  Fixes incomplete LICENSE file per 2021-02-25 email.
 
 ## R CMD check results
 - No ERRORS or WARNINGS
-
+ 
 ## Downstream dependencies
 There are currently no downstream dependencies

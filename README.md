@@ -1,5 +1,8 @@
 [![R build
 status](https://github.com/jhollist/dadjokeapi/workflows/R-CMD-check/badge.svg)](https://github.com/jhollist/dadjokeapi/actions)
+[![](https://www.r-pkg.org/badges/version/dadjokeapi)](https://www.r-pkg.org/pkg/dadjokeapi)
+[![CRAN RStudio mirror
+downloads](https://cranlogs.r-pkg.org/badges/dadjokeapi)](https://www.r-pkg.org/pkg/dadjokeapi)
 [![Codecov test
 coverage](https://codecov.io/gh/jhollist/dadjokeapi/branch/master/graph/badge.svg)](https://codecov.io/gh/jhollist/dadjokeapi?branch=master)
 
